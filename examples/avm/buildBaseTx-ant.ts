@@ -1,22 +1,16 @@
-import { GetUTXOsResponse } from "avalanche/dist/apis/avm/interfaces"
-import { Avalanche, BN, Buffer } from "avalanche/dist"
-import {
-  AVMAPI,
-  KeyChain,
-  UTXOSet,
-  UnsignedTx,
-  Tx
-} from "avalanche/dist/apis/avm"
-import { UnixNow } from "avalanche/dist/utils"
+import { GetUTXOsResponse } from "../../dist/apis/avm/interfaces"
+import { Avalanche, BN, Buffer } from "../../dist"
+import { AVMAPI, KeyChain, UTXOSet, UnsignedTx, Tx } from "../../dist/apis/avm"
+import { UnixNow } from "../../dist/utils"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const xchain: AVMAPI = avalanche.XChain()
 const xKeychain: KeyChain = xchain.keyChain()

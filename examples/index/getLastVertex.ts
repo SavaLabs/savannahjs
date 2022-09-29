@@ -1,7 +1,7 @@
-import { Avalanche, BinTools, Buffer } from "../../src"
-import { IndexAPI } from "../../src/apis/index/index"
-import { GetLastAcceptedResponse } from "../../src/apis/index/interfaces"
-import { Vertex } from "../../src/apis/avm"
+import { Avalanche, BinTools, Buffer } from "../../dist"
+import { IndexAPI } from "../../dist/apis/index/index"
+import { GetLastAcceptedResponse } from "../../dist/apis/index/interfaces"
+import { Vertex } from "../../dist/apis/avm"
 
 const ip: string = "indexer-demo.avax.network"
 const port: number = 443

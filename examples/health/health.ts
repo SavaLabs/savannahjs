@@ -1,11 +1,11 @@
-import { Avalanche } from "avalanche/dist"
-import { HealthAPI } from "avalanche/dist/apis/health"
-import { HealthResponse } from "avalanche/dist/apis/health/interfaces"
+import { Avalanche } from "../../dist"
+import { HealthAPI } from "../../dist/apis/health"
+import { HealthResponse } from "../../dist/apis/health/interfaces"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const health: HealthAPI = avalanche.Health()
 

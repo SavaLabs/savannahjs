@@ -1,11 +1,11 @@
-import { Avalanche } from "avalanche/dist"
-import { EVMAPI, KeyChain, KeyPair } from "avalanche/dist/apis/evm"
-import { CreateKeyPairResponse } from "avalanche/dist/apis/evm/interfaces"
+import { Avalanche } from "../../dist"
+import { EVMAPI, KeyChain, KeyPair } from "../../dist/apis/evm"
+import { CreateKeyPairResponse } from "../../dist/apis/evm/interfaces"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const cchain: EVMAPI = avalanche.CChain()
 

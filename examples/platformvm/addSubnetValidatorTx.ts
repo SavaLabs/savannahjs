@@ -1,4 +1,4 @@
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
 import {
   PlatformVMAPI,
   KeyChain,
@@ -12,19 +12,19 @@ import {
   UnsignedTx,
   Tx,
   AddSubnetValidatorTx
-} from "avalanche/dist/apis/platformvm"
+} from "../../dist/apis/platformvm"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   NodeIDStringToBuffer,
   Defaults
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
 const bintools: BinTools = BinTools.getInstance()
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const pchain: PlatformVMAPI = avalanche.PChain()
 // Keychain with 4 keys-A, B, C, and D

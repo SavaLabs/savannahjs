@@ -1,4 +1,4 @@
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
 import {
   AVMAPI,
   SECPTransferOutput,
@@ -16,13 +16,13 @@ import {
   KeyChain,
   NFTMintOperation,
   NFTMintOutput
-} from "avalanche/dist/apis/avm"
-import { OutputOwners } from "avalanche/dist/common"
+} from "../../dist/apis/avm"
+import { OutputOwners } from "../../dist/common"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   Defaults
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
 // before you run this example buildCreateNFTAssetTx.ts
 
@@ -47,10 +47,10 @@ const getUTXOIDs = (
   return result
 }
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const xchain: AVMAPI = avalanche.XChain()
 const bintools: BinTools = BinTools.getInstance()

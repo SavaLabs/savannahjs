@@ -1,4 +1,4 @@
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
 import {
   AVMAPI,
   KeyChain,
@@ -9,13 +9,13 @@ import {
   AVMConstants,
   SECPTransferOutput,
   UTXO
-} from "avalanche/dist/apis/avm"
-import { GetUTXOsResponse } from "avalanche/dist/apis/avm/interfaces"
+} from "../../dist/apis/avm"
+import { GetUTXOsResponse } from "../../dist/apis/avm/interfaces"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   UnixNow
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
 // assetID is generated from running
 // ts-node examples/avm/buildCreateAssetTx.ts
@@ -42,10 +42,10 @@ const getUTXOIDs = (
   return result
 }
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const xchain: AVMAPI = avalanche.XChain()
 const bintools: BinTools = BinTools.getInstance()

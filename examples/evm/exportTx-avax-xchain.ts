@@ -1,5 +1,5 @@
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
-import { AVMAPI, KeyChain as AVMKeyChain } from "avalanche/dist/apis/avm"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
+import { AVMAPI, KeyChain as AVMKeyChain } from "../../dist/apis/avm"
 import {
   EVMAPI,
   KeyChain as EVMKeyChain,
@@ -9,17 +9,17 @@ import {
   ExportTx,
   SECPTransferOutput,
   TransferableOutput
-} from "avalanche/dist/apis/evm"
+} from "../../dist/apis/evm"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   Defaults
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const xchain: AVMAPI = avalanche.XChain()
 const cchain: EVMAPI = avalanche.CChain()

@@ -1,5 +1,5 @@
 import createHash from "create-hash"
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
 import {
   AVMAPI,
   KeyChain,
@@ -13,18 +13,18 @@ import {
   UnsignedTx,
   Tx,
   BaseTx
-} from "avalanche/dist/apis/avm"
+} from "../../dist/apis/avm"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   Defaults
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
 const bintools: BinTools = BinTools.getInstance()
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 
 const xBlockchainID: string = Defaults.network[networkID].X.blockchainID
 const avaxAssetID: string = Defaults.network[networkID].X.avaxAssetID

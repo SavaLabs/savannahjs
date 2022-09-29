@@ -1,8 +1,8 @@
-import { Avalanche, BinTools, BN, Buffer } from "avalanche/dist"
+import { Avalanche, BinTools, BN, Buffer } from "../../dist"
 import {
   PlatformVMAPI,
   KeyChain as PlatformVMKeyChain
-} from "avalanche/dist/apis/platformvm"
+} from "../../dist/apis/platformvm"
 import {
   EVMAPI,
   KeyChain as EVMKeyChain,
@@ -12,19 +12,19 @@ import {
   ExportTx,
   SECPTransferOutput,
   TransferableOutput
-} from "avalanche/dist/apis/evm"
+} from "../../dist/apis/evm"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   Defaults,
   ONEAVAX
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 const Web3 = require("web3")
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const pchain: PlatformVMAPI = avalanche.PChain()
 const cchain: EVMAPI = avalanche.CChain()

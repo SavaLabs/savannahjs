@@ -1,26 +1,26 @@
-import { Avalanche, BN } from "avalanche/dist"
+import { Avalanche, BN } from "../../dist"
 import {
   PlatformVMAPI,
   KeyChain as PlatformVMKeyChain
-} from "avalanche/dist/apis/platformvm"
+} from "../../dist/apis/platformvm"
 import {
   EVMAPI,
   KeyChain as EVMKeyChain,
   UnsignedTx,
   Tx,
   UTXOSet
-} from "avalanche/dist/apis/evm"
+} from "../../dist/apis/evm"
 import {
   PrivateKeyPrefix,
   DefaultLocalGenesisPrivateKey,
   Defaults,
   costImportTx
-} from "avalanche/dist/utils"
+} from "../../dist/utils"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const pchain: PlatformVMAPI = avalanche.PChain()
 const cchain: EVMAPI = avalanche.CChain()

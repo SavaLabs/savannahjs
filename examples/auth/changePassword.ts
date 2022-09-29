@@ -2,14 +2,14 @@
 // which you can create based on "secrets.example" which is in the
 // root of the `examples/` directory.
 // Unlike "secrets.example", "secrets.json" should never be committed to git.
-import { Avalanche } from "avalanche/dist"
-import { AuthAPI } from "avalanche/dist/apis/auth"
+import { Avalanche } from "../../dist"
+import { AuthAPI } from "../../dist/apis/auth"
 import { readFile } from "fs"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const auth: AuthAPI = avalanche.Auth()
 

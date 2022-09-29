@@ -1,11 +1,11 @@
-import { Avalanche } from "avalanche/dist"
-import { IndexAPI } from "avalanche/dist/apis/index"
-import { GetContainerRangeResponse } from "avalanche/dist/apis/index/interfaces"
+import { Avalanche } from "../../dist"
+import { IndexAPI } from "../../dist/apis/index"
+import { GetContainerRangeResponse } from "../../dist/apis/index/interfaces"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const index: IndexAPI = avalanche.Index()
 

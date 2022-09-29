@@ -1,10 +1,10 @@
-import { Avalanche } from "avalanche/dist"
-import { AdminAPI } from "avalanche/dist/apis/admin"
+import { Avalanche } from "../../dist"
+import { AdminAPI } from "../../dist/apis/admin"
 
-const ip: string = "localhost"
+const ip: string = "marularpc.savannah.network"
 const port: number = 9650
 const protocol: string = "http"
-const networkID: number = 1337
+const networkID: number = 7
 const avalanche: Avalanche = new Avalanche(ip, port, protocol, networkID)
 const admin: AdminAPI = avalanche.Admin()
 

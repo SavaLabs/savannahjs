@@ -1,10 +1,10 @@
-import { Avalanche, Buffer } from "../../src"
-import { Vertex } from "../../src/apis/avm"
-import { IndexAPI } from "../../src/apis/index"
+import { Avalanche, Buffer } from "../../dist"
+import { Vertex } from "../../dist/apis/avm"
+import { IndexAPI } from "../../dist/apis/index"
 import {
   GetContainerByIndexResponse,
   GetLastAcceptedResponse
-} from "../../src/apis/index/interfaces"
+} from "../../dist/apis/index/interfaces"
 
 const ip: string = "indexer-demo.avax.network"
 const port: number = 443
