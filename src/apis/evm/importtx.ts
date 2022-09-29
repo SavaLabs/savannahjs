@@ -310,7 +310,7 @@ export class ImportTx extends EVMBaseTx {
       }
     })
     if (feeDiff.lt(fee)) {
-      const errorMessage: string = `Error - ${fee} nAVAX required for fee and only ${feeDiff} nAVAX provided`
+      const errorMessage: string = `Error - ${fee} nFUEL required for fee and only ${feeDiff} nFUEL provided`
       throw new EVMFeeError(errorMessage)
     }
   }

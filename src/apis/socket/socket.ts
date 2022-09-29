@@ -4,7 +4,7 @@
  */
 import { ClientRequestArgs } from "http"
 import WebSocket from "isomorphic-ws"
-import { MainnetAPI } from "../../utils"
+import { SavannahAPI, MarulaAPI } from "../../utils"
 export class Socket extends WebSocket {
   // Fires once the connection has been established between the client and the server
   onopen: any
@@ -38,11 +38,11 @@ export class Socket extends WebSocket {
   /**
    * Provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection.
    *
-   * @param url Defaults to [[MainnetAPI]]
+   * @param url Defaults to [[MarulaAPI]]
    * @param options Optional
    */
   constructor(
-    url: string | import("url").URL = `wss://${MainnetAPI}:443/ext/bc/X/events`,
+    url: string | import("url").URL = `wss://${MarulaAPI}:9650/ext/bc/X/events`,
     options?: WebSocket.ClientOptions | ClientRequestArgs
   ) {
     super(url, options)

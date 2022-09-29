@@ -366,6 +366,8 @@ export default class BinTools {
     if (
       humanReadablePart !== "avax" &&
       humanReadablePart !== "fuji" &&
+      humanReadablePart !== "savannah" &&
+      humanReadablePart !== "marula" &&
       humanReadablePart != "local" &&
       humanReadablePart != "custom" &&
       humanReadablePart != hrp
